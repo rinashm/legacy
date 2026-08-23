@@ -1,0 +1,14 @@
+\usepackage[nameinlink, russian]{cleveref}
+
+% \newcommand*{\picref}[1]{%
+% 	рис.~\ref{#1}%
+% }
+% \newcommand*{\Picref}[1]{%
+% 	Рис.~\ref{#1}%
+% }
+
+\renewcommand*{\figureautorefname}{рис.}
+\renewcommand*{\tableautorefname}{табл.}
+
+\newcommand*{\picref}[1]{\autoref{#1}}
+\newcommand*{\tabref}[1]{\autoref{#1}}
