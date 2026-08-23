@@ -29,7 +29,7 @@ then
 fi
 
 case $1 in
-	--all)
+	--all|-a)
 		do_pdflatex
 		do_biblatex
 		do_pdflatex
