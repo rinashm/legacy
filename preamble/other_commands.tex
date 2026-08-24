@@ -16,13 +16,22 @@
 
 \newbox\nextitem
 
-\savebox{\nextitem}{%
-	\scalebox{1.5}{%
-			\rotatebox{-90}{%
-				% \fbox{%
-					\mbox{$\leq$}%
-				% }%
+\AtBeginDocument{%
+	\savebox{\nextitem}{%
+		\scalebox{1.5}{%
+				\rotatebox{-90}{%
+					% \fbox{%
+						\mbox{$\leq$}%
+					% }%
+				}%
+		}%
+		\raisebox{-2ex}{%
+			\rlap{%
+				\quad
+				$\longleftarrow$~%
+				\text{(<<не превосходит>>)}%
 			}%
+		}%
 	}%
 }
 
