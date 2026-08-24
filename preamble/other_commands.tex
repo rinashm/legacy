@@ -12,14 +12,22 @@
 \renewcommand*{\leq}{\leqslant}
 \renewcommand*{\geq}{\geqslant}
 
-\newcommand*{\nextitem}{%
-	\scalebox{1.2}{%
+\usepackage[all]{xypic}
+
+\newbox\nextitem
+
+\savebox{\nextitem}{%
+	\scalebox{1.5}{%
 			\rotatebox{-90}{%
-				\fbox{%
+				% \fbox{%
 					\mbox{$\leq$}%
-				}%
+				% }%
 			}%
 	}%
+}
+
+\newcommand*{\insertsucc}{%
+	\ar @{} [d] |{\usebox\nextitem}%
 }
 
 % vim:ts=2:sw=2:tw=68
