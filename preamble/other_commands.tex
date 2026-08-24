@@ -9,4 +9,17 @@
 % Как отображается номер для subsection
 \renewcommand*{\thesubsection}{\arabic{subsection}}
 
+\renewcommand*{\leq}{\leqslant}
+\renewcommand*{\geq}{\geqslant}
+
+\newcommand*{\nextitem}{%
+	\scalebox{1.2}{%
+			\rotatebox{-90}{%
+				\fbox{%
+					\mbox{$\leq$}%
+				}%
+			}%
+	}%
+}
+
 % vim:ts=2:sw=2:tw=68
