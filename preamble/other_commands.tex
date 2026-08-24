@@ -15,6 +15,7 @@
 \usepackage[all]{xypic}
 
 \newbox\nextitem
+\newbox\nextitemarrow
 
 \AtBeginDocument{%
 	\savebox{\nextitem}{%
@@ -25,6 +26,9 @@
 					% }%
 				}%
 		}%
+	}%
+	\savebox{\nextitemarrow}{%
+		\usebox{\nextitem}%
 		\raisebox{-1.8ex}{%
 			\rlap{%
 				\quad
@@ -38,6 +42,10 @@
 
 \newcommand*{\insertsucc}{%
 	\ar @{} [d] |{\usebox\nextitem}%
+}
+
+\newcommand*{\insertsuccarrow}{%
+	\ar @{} [d] |{\usebox\nextitemarrow}%
 }
 
 % vim:ts=2:sw=2:tw=68
