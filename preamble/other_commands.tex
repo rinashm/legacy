@@ -20,23 +20,23 @@
 \AtBeginDocument{%
 	\savebox{\nextitem}{%
 		\scalebox{1.5}{%
-				\rotatebox{-90}{%
+				% \rotatebox{-90}{%
 					% \fbox{%
 						\mbox{$\leq$}%
 					% }%
-				}%
+				% }%
 		}%
 	}%
 	\savebox{\nextitemarrow}{%
 		\usebox{\nextitem}%
-		\raisebox{-1.8ex}{%
-			\rlap{%
-				\quad
-				\color{mcnSecondary}%
-				$\xleftarrow{\hbox to 10em {}}$~%
-				\text{<<не превосходит>>}%
-			}%
-		}%
+		% \raisebox{-1.8ex}{%
+		% 	\rlap{%
+		% 		\quad
+		% 		\color{mcnSecondary}%
+		% 		$\xleftarrow{\hbox to 10em {}}$~%
+		% 		\text{<<не превосходит>>}%
+		% 	}%
+		% }%
 	}%
 }
 
