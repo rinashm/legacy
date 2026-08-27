@@ -402,8 +402,22 @@
 			\noindent\hspace{8pt}%
 			\begin{minipage}{\dimexpr\linewidth-16pt\relax}%
 				{\raggedright
-					{\small\sffamily\bfseries\color{mcnSecondary} ЛЕКЦИЯ #2 \ifx&#1&\else\hfill #1\fi}\par\vspace{2pt}%
-					{\Large\sffamily\bfseries\color{mcnPrimary} #3}\par
+					{\small
+						\sffamily
+						\bfseries
+						\color{mcnSecondary}%
+						\colontitleso{ЛЕКЦИЯ #2}%
+						\ifx&#1&\else\hfill #1\fi
+						\par
+					}%
+					\vspace{2pt}%
+					{\Large
+						\sffamily
+						\bfseries
+						\color{mcnPrimary}%
+						#3
+						\par
+					}%
 				}%
 			\end{minipage}%
 			\vspace{6pt}%
@@ -793,7 +807,10 @@
 }
 
 % 🟆 Зачем?
-%\RequirePackage{soul}  
+% Для надписей вразрядку
+\RequirePackage{soul}
+% <cmd>{font}{inter-letter}{inner}{outer}
+\sodef\colontitleso{}{.2em}{0.8em}{1em plus 0.1em minus 0.1em}
 
 % Подчёркивание для \href (hyperref сам по себе не подчёркивает colorlinks)
 \AtBeginDocument{%
